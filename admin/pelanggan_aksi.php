@@ -8,5 +8,5 @@ $alamat = $_POST['alamat'];
  
 mysqli_query($koneksi, "INSERT INTO pelanggan VALUES('', '$nama', '$hp', '$alamat')");
 
-header("location:pelanggan.php");
+echo "<script>alert('Data sudah diubah?'); window.location.href='pelanggan.php'</script>";
 ?>

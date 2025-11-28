@@ -1,80 +1,73 @@
+<footer class="footer-new">
 
-     <footer class="footer">
+  <!-- GOOGLE FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
-  <!-- FONT GOOGLE -->
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500&display=swap" rel="stylesheet">
-  <!-- FONT AWESOME ICON -->
+  <!-- ICON -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
-    .footer {
-      background-color: #d0e8f2; /* Soft Blue Background */
-      color: #333;
-      padding: 50px 20px 20px;
-      font-family: 'Segoe UI', sans-serif;
+    .footer-new {
+      background: linear-gradient(to bottom, #e8f4ff, #d6e9ff);
+      padding: 60px 20px 30px;
+      font-family: 'Poppins', sans-serif;
       position: relative;
       overflow: hidden;
     }
 
-    /* Background dengan ikon mesin cuci & baju, gambar diperbesar dan warna diperkuat */
-    .footer::before {
+    /* Background bubble dan wave */
+    .footer-new::before {
       content: "";
-      background: url('https://cdn-icons-png.flaticon.com/512/2040/2040670.png') no-repeat left bottom,
-                  url('https://cdn-icons-png.flaticon.com/512/891/891462.png') no-repeat right top;
-      background-size: 180px, 140px; /* diperbesar */
-      opacity: 0.15; /* opacity diperkuat supaya lebih terlihat */
       position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
+      inset: 0;
+      background: url('https://cdn-icons-png.flaticon.com/512/2907/2907253.png') no-repeat right bottom,
+                  url('https://cdn-icons-png.flaticon.com/512/4149/4149678.png') no-repeat left top;
+      background-size: 150px, 130px;
+      opacity: 0.12;
       z-index: 0;
     }
 
-    .footer-container {
+    .footer-new-container {
       position: relative;
       z-index: 1;
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
+      gap: 30px;
       max-width: 1200px;
       margin: auto;
+      justify-content: space-between;
     }
 
-    .footer-about,
-    .footer-links,
-    .footer-contact,
-    .footer-social {
-      flex: 1 1 200px;
-      margin: 20px;
+    .footer-box {
+      flex: 1 1 230px;
+      background: rgba(255,255,255,0.7);
+      padding: 20px;
+      border-radius: 12px;
+      backdrop-filter: blur(3px);
+      border: 1px solid #c7dffc;
     }
 
-    .footer h3 {
-      font-family: 'Fredoka', sans-serif;
+    .footer-box h4 {
+      font-weight: 600;
+      color: #1e2a3a;
+      margin-bottom: 15px;
+      font-size: 20px;
+    }
+
+    .footer-brand {
       font-size: 26px;
       font-weight: 600;
-      color: #000; /* Hitam untuk "WinFresh" */
+      color: #1e2a3a;
     }
 
-    .footer h3 span {
-      color: #5da9e9; /* Soft Blue untuk "Laundry" */
+    .footer-brand span {
+      color: #4d9fe7;
     }
 
-    .footer h4 {
-      color: #2b2b2b;
-      margin-bottom: 15px;
-      font-weight: bold;
-    }
-
-    .footer p, .footer a {
-      color: #444;
+    .footer-box p, .footer-box a {
       font-size: 14px;
-      line-height: 1.6;
+      color: #555;
       text-decoration: none;
-    }
-
-    .footer a:hover {
-      color: #000;
     }
 
     .footer-links ul {
@@ -82,139 +75,102 @@
       padding: 0;
     }
 
-    .footer-links ul li {
+    .footer-links li {
       margin-bottom: 10px;
       display: flex;
       align-items: center;
+      gap: 8px;
     }
 
-    .footer-links ul li i {
-      margin-right: 8px;
-      color: #5da9e9;
+    .footer-links i {
+      color: #4d9fe7;
       font-size: 18px;
-      width: 20px;
-      text-align: center;
     }
 
-    .footer-social .social-icons {
+    /* Social icons */
+    .footer-social-icons {
       display: flex;
-      gap: 15px;
+      gap: 12px;
       margin-top: 10px;
-      justify-content: flex-start;
     }
 
-    .footer-social i {
-      font-size: 20px;
-      transition: transform 0.3s;
-    }
-
-    .footer-social a:nth-child(1) i { color: #e39ab8; } /* Instagram */
-    .footer-social a:nth-child(2) i { color: #8cb7e0; } /* Facebook */
-    .footer-social a:nth-child(3) i { color: #9fe7a4; } /* WhatsApp */
-
-    .footer-social i:hover {
-      transform: scale(1.2);
-    }
-
-    /* Tambahan style untuk teks nama akun di bawah ikon */
-    .social-names {
+    .footer-social-icons a {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: #fff;
       display: flex;
-      gap: 45px; /* jarak antar teks supaya rata dengan ikon */
-      margin-top: 5px;
-      font-size: 13px;
-      color: #444;
-      font-family: 'Segoe UI', sans-serif;
+      justify-content: center;
+      align-items: center;
+      color: #4d9fe7;
+      font-size: 18px;
+      border: 1px solid #c8dfff;
+      transition: 0.3s;
     }
 
-    /* Kotak hiasan pojok bawah kanan */
-    .footer::after {
-      content: "";
-      position: absolute;
-      width: 70px;
-      height: 70px;
-      background: #5da9e9;
-      border-radius: 15px 0 0 0;
-      bottom: 0;
-      right: 0;
-      opacity: 0.15;
-      z-index: 0;
-      box-shadow: 2px -2px 10px rgba(0,0,0,0.1);
+    .footer-social-icons a:hover {
+      transform: translateY(-3px);
+      background: #4d9fe7;
+      color: #fff;
     }
 
     .footer-bottom {
       text-align: center;
-      margin-top: 30px;
       font-size: 13px;
-      color: #666;
-      border-top: 1px solid #ccc;
+      color: #555;
+      margin-top: 40px;
+      border-top: 1px solid #bcd3f1;
       padding-top: 15px;
-      position: relative;
-      z-index: 1;
     }
 
     @media (max-width: 768px) {
-      .footer-container {
+      .footer-new-container {
         flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .footer-about, .footer-links, .footer-contact, .footer-social {
-        margin-bottom: 30px;
-      }
-
-      /* Agar teks nama akun tidak terlalu mepet */
-      .social-names {
-        gap: 25px;
-        flex-wrap: wrap;
       }
     }
   </style>
 
-  <div class="footer-container">
+  
+  <div class="footer-new-container">
 
-    <!-- Logo dan Deskripsi -->
-    <div class="footer-about">
-      <h3>WinFresh <span>Laundry</span></h3>
-      <p>Solusi laundry cepat, bersih, dan terpercaya untuk kebutuhan harian Anda.</p>
+    <!-- Brand -->
+    <div class="footer-box">
+      <div class="footer-brand">NdinWash <span>Laundry</span></div>
+      <p>Kenyamanan Anda adalah prioritas kami. Layanan laundry terpercaya dan cepat untuk kebutuhan harian.</p>
     </div>
 
     <!-- Layanan -->
-    <div class="footer-links">
-      <h4>Layanan</h4>
+    <div class="footer-box footer-links">
+      <h4>Layanan Kami</h4>
       <ul>
-        <li><i class="fas fa-tshirt"></i> Cuci Kering</li>
-        <li><i class="fas fa-water"></i> Cuci Setrika</li>
-        <li><i class="fas fa-bolt"></i> Layanan Express</li>
+        <li><i class="fas fa-soap"></i> Cuci Reguler</li>
+        <li><i class="fas fa-burn"></i> Pengeringan Cepat</li>
+        <li><i class="fas fa-shipping-fast"></i> Antar Jemput</li>
       </ul>
     </div>
 
     <!-- Kontak -->
-    <div class="footer-contact">
-      <h4>Kontak Kami</h4>
-      <p><i class="fas fa-map-marker-alt"></i> Jl.Air Panas No.13, Nglimut</p>
+    <div class="footer-box">
+      <h4>Kontak</h4>
+      <p><i class="fas fa-map-marker-alt"></i> Jl. Kepodang No.30, Semarang</p>
       <p><i class="fas fa-phone"></i> 0812-3456-7890</p>
-      <p><i class="fas fa-clock"></i> Senin - Sabtu: 08.00 - 20.00</p>
+      <p><i class="fas fa-clock"></i> 08.00 - 20.00 (Senin - Sabtu)</p>
     </div>
 
-    <!-- Sosial Media -->
-    <div class="footer-social">
+    <!-- Social -->
+    <div class="footer-box">
       <h4>Ikuti Kami</h4>
-      <div class="social-icons">
+      <div class="footer-social-icons">
         <a href="#"><i class="fab fa-instagram"></i></a>
         <a href="#"><i class="fab fa-facebook-f"></i></a>
         <a href="#"><i class="fab fa-whatsapp"></i></a>
-      </div>
-      <div class="social-names">
-        <div>@winfreshlaundry</div>
-        
-        <div>&nbsp;</div> <!-- kosong untuk WA, atau bisa diganti no WA -->
       </div>
     </div>
 
   </div>
 
   <div class="footer-bottom">
-    <p>&copy; <?php echo date("Y"); ?> WinFresh Laundry. All rights reserved.</p>
+    &copy; <?php echo date("Y"); ?> NdinWash Laundry. All Rights Reserved.
   </div>
 
 </footer>
